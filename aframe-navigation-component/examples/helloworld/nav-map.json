@@ -1,0 +1,11 @@
+{
+  "baseDir": "/examples/helloworld/views",
+  "layoutViews": {
+    "basic": "/layouts/helloworld.html"
+  },
+  "panelViews": {
+    "home": "/panels/home.html",
+    "settings": "/panels/settings.html",
+    "profile": "/panels/profile.html"
+  }
+}
