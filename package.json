@@ -5,7 +5,7 @@
   "main": "index.js",
   "cdn": "dist/aframe-navigation-component.min.js",
   "scripts": {
-    "dev": "budo index.js:dist/aframe-navigation-component.min.js --port 7000 --live --open",
+    "dev": "budo  --port 7000 --live --open babelify",
     "dist": "webpack index.js dist/aframe-navigation-component.js && webpack -p index.js dist/aframe-navigation-component.min.js",
     "lint": "semistandard -v | snazzy",
     "prepublish": "npm run dist",
@@ -36,6 +36,8 @@
   "homepage": "https://github.com/pardolab/aframe-navigation#readme",
   "devDependencies": {
     "aframe": "*",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
     "browserify": "^13.0.0",
     "budo": "^8.2.2",
     "chai": "^3.4.1",
@@ -54,11 +56,13 @@
     "randomcolor": "^0.4.4",
     "semistandard": "^8.0.0",
     "shelljs": "^0.7.0",
+    "shx": "^0.1.1",
     "sinon": "^1.17.5",
     "sinon-chai": "^2.8.0",
-    "shx": "^0.1.1",
     "snazzy": "^4.0.0",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "webpack-copy-plugin": "0.0.4",
+    "webpack-dev-server": "^2.6.1"
   },
   "semistandard": {
     "globals": [
