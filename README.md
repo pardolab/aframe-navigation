@@ -7,6 +7,7 @@ Highly Customizable Navigation System
 
 For [A-Frame](https://aframe.io).
 
+### [DEMO](https://pardolab.github.io/aframe-navigation/)
 ### [API](https://github.com/pardolab/aframe-navigation/wiki/Components)
 
 ### Installation
