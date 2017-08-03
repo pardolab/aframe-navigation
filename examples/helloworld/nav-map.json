@@ -1,5 +1,5 @@
 {
-  "baseDir": "/aframe-navigation/examples/helloworld/views",
+  "baseDir": "/examples/helloworld/views",
   "layoutViews": {
     "basic": "/layouts/helloworld.html"
   },
