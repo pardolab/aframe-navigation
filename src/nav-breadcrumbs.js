@@ -1,24 +1,18 @@
-
-// Crumb
-// {
-//   label - name of breadcrumb
-//   panelName - panel name to goto when the breadcrumb is clicked
-// }
-
 module.exports = AFRAME.registerComponent('nav-breadcrumbs', {
   schema: {
     width: {type: 'number', default: 1},
     height: {type: 'number', default: 0.2},
     maxCrumbs: {type: 'number', default: 8},
   },
-  init() {
+
+  init: function() {
     this.crumbs = [];
     this.breadcrumbsAmount = 0;                // Current amount of breadcrumbs
     this.breadcrumbOffset = 0.1;               // How far away breadcrumbs are from each other.
     this.breadcrumbHeight = 0.2;
 
   },
-  update(oldData) {
+  update: function(oldData) {
     // Resize Crumbs
     this.breadcrumbs = this.getBreadcrumbElements();
 
@@ -39,12 +33,11 @@ module.exports = AFRAME.registerComponent('nav-breadcrumbs', {
    * @param {*} label - label to be displayed on the breadcrumb button
    * @param {*} panelName - The exact panel name (reference panel.js). Acts as a link when clicked.
    */
-  addBreadCrumb(label, panelName) {
+  addBreadCrumb: function(label, panelName) {
 
     this.updateValue();
-
-
     console.log('breadcrumb: ', label);
+    
     let el = document.createElement('a-entity');
     el.setAttribute('nav-button', {
       width: this.breadcrumbWidth,
@@ -73,7 +66,7 @@ module.exports = AFRAME.registerComponent('nav-breadcrumbs', {
     this.el.appendChild(el);
   },
   
-  updateBreadcrumbs() {
+  updateBreadcrumbs: function() {
     //  this.breadcrumbs.forEach((el, i) => {
     //     el.setAttribute('ui-push-button', {
     //       width: this.breadcrumbWidth,
@@ -86,7 +79,7 @@ module.exports = AFRAME.registerComponent('nav-breadcrumbs', {
     //  console.log('updated breadcrumb', this.breadcrumbs);
   },
 
-  resetBreadcrumbs() {
+  resetBreadcrumbs: function() {
     this.crumbs = [];
     this.breadcrumbsAmount = 0;
   },
@@ -96,12 +89,12 @@ module.exports = AFRAME.registerComponent('nav-breadcrumbs', {
    * Based on breadcrumb amount
    * @param amount - The amount of currently active breadcrumbs
    */
-  getNewId(amount) {
+  getNewId: function(amount) {
     return `crumb${this.breadcrumbsAmount.length}`;
   },
 
   
-  getBreadcrumbElements(amount) {
+  getBreadcrumbElements: function(amount) {
     let elementArray = []
     for(let i=0; i<amount; ++i) {
       let el = this.el.querySelector(`#crumb${i}`);
@@ -119,7 +112,7 @@ module.exports = AFRAME.registerComponent('nav-breadcrumbs', {
    * @param {*} offset - breadcrumb offset to another breadcrumb
    * @param {*} initPos - Inital position of all breadcrumbs
    */
-  getNextXPos(breadcrumbs, width, offset, initPos) {
+  getNextXPos: function(breadcrumbs, width, offset, initPos) {
     let nextPos = breadcrumbs.length * (width + offset) - initPos;
     return nextPos;
   },
@@ -132,12 +125,12 @@ module.exports = AFRAME.registerComponent('nav-breadcrumbs', {
    * @param {*} offset - breadcrumb offset to another breadcrumb
    * @param {*} initPos - Inital position of all breadcrumbs
    */
-  getNextXPosByIndex(index, width, offset, initPos) {
+  getNextXPosByIndex: function(index, width, offset, initPos) {
     let nextPos = index * (width + offset) - initPos;
     return nextPos;
   },
 
-  updateValue() {
+  updateValue: function() {
     this.breadcrumbWidth = this.data.width / this.data.maxCrumbs;
     let randomOffset = 1.32;
     this.breadcrumbInitPosOffset = (this.data.width / 2) - (this.breadcrumbWidth / 2);
