@@ -1,0 +1,30 @@
+{
+  "baseDir": "views",
+  "layoutViews": {
+    "default": "/panel-group/demo-panel.html",
+    "demo": "/panel-group/demo-panel.html",
+    "test": "/panel-group/test.html",
+    "circuit" : "/panel-group/circuit-panel.html",
+    "explanations": "/panel-group/explanations-panel.html",
+    "voltage": "/panel-group/voltage.html",
+    "static-nav": "/panel-group/static-nav.html",
+    "activities": "/panel-group/activities.html"
+  },
+  "panelViews": {
+    "default": "/panel/home.html",
+    "home": "/panel/home.html",
+    "lab": "/panel/lab.html",
+    "explanations": "/panel/explanations.html",
+    "generatorController": "/panel/generator-controller.html",
+    "voltage01": "/panel/voltage/01.html",
+    "voltage02": "/panel/voltage/02.html",
+    "activitiesPhysics": "/panel/activities-physics.html",
+    "activitiesChem": "/panel/activities-chem.html",
+    "activitiesBio": "/panel/activities-bio.html",
+    "test-panel": "/panel/test-panel.html",
+    "menu-activities": "/panel/menu-activities.html",
+    "menu-activities-sidenav": "/panel/menu-activities-sidenav.html",
+    "measuringTools": "/panel/measuringTools.html",
+    "empty": "/panel/empty.html"
+  }
+}

@@ -6,7 +6,7 @@
   "cdn": "https://unpkg.com/aframe-navigation/dist/aframe-navigation.min.js",
   "scripts": {
     "dev": "budo  --port 7000 --live --open",
-    "dist": "webpack index.js dist/aframe-navigation.js babelify && webpack -p index.js dist/aframe-navigation.min.js babelify",
+    "dist": "webpack index.js dist/aframe-navigation.js && webpack -p index.js dist/aframe-navigation.min.js",
     "lint": "semistandard -v | snazzy",
     "prepublish": "npm run dist",
     "ghpages": "ghpages",
