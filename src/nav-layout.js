@@ -156,7 +156,7 @@ module.exports = AFRAME.registerComponent('nav-layout', {
     try {
       let viewDir = this.viewMap.layoutViews[viewName];
       if (!viewDir) {
-        console.warn('View Directory Undefined');
+        console.warn('Access Failed to view name: ', viewName, 'on element', this.el);
         callback('');
         return;
       }

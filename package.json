@@ -1,12 +1,12 @@
 {
-  "name": "aframe-navigation-component",
+  "name": "aframe-navigation",
   "version": "1.0.0",
   "description": "Highly customizable navigation system",
   "main": "index.js",
-  "cdn": "dist/aframe-navigation-component.min.js",
+  "cdn": "dist/aframe-navigation.js",
   "scripts": {
-    "dev": "budo  --port 7000 --live --open babelify",
-    "dist": "webpack index.js dist/aframe-navigation-component.js && webpack -p index.js dist/aframe-navigation-component.min.js",
+    "dev": "budo  --port 7000 --live --open",
+    "dist": "webpack index.js dist/aframe-navigation.js babelify && webpack -p index.js dist/aframe-navigation.min.js babelify",
     "lint": "semistandard -v | snazzy",
     "prepublish": "npm run dist",
     "ghpages": "ghpages",
@@ -43,6 +43,8 @@
     "chai": "^3.4.1",
     "chai-shallow-deep-equal": "^1.3.0",
     "ghpages": "^0.0.8",
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.11",
     "karma": "^0.13.15",
     "karma-browserify": "^4.4.2",
     "karma-chai-shallow-deep-equal": "0.0.4",
@@ -60,9 +62,7 @@
     "sinon": "^1.17.5",
     "sinon-chai": "^2.8.0",
     "snazzy": "^4.0.0",
-    "webpack": "^1.13.0",
-    "webpack-copy-plugin": "0.0.4",
-    "webpack-dev-server": "^2.6.1"
+    "webpack": "^3.4.1"
   },
   "semistandard": {
     "globals": [
