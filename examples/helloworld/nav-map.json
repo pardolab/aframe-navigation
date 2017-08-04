@@ -1,5 +1,5 @@
 {
-  "baseDir": "/examples/helloworld/views",
+  "baseDir": "views",
   "layoutViews": {
     "basic": "/layouts/helloworld.html"
   },
