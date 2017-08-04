@@ -1,12 +1,6 @@
 module.exports = AFRAME.registerComponent('nav-layout', {
   multiple: true,
   schema: {
-    opacity: {type: "number", default: 0.8},
-    hoverOpacity: {type: "number", default: 0.3},
-    color: {type: "color", default: "#010101"},
-    edgeColor: {type: "color", default: "#010101"},
-    textColor: {type: "color", default: "#fefefe"},
-    label: {type: "string", default: "Menu"},
     distanceAway: {type: "number", default: 5},      // Distance away from user in meters
     layoutView: {type: "string", default: ''},
     navMapUrl: {type: 'string', default: ''},
@@ -31,11 +25,6 @@ module.exports = AFRAME.registerComponent('nav-layout', {
         this.goToView(this.currentlayoutView);
       })     
     });
-
-    // Allows for immediate opening of nav
-    // setTimeout(() => {
-    //   console.log(this.viewMap);
-    // }, 1000);
     
 
     this.cameraQuat = new THREE.Quaternion();

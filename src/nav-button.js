@@ -329,7 +329,7 @@ module.exports = AFRAME.registerComponent('nav-button', {
 
       // Add image if available
       try {
-        if (this.data.image != "") {
+        if (!this.data.image) {
           let map = imageLoader.load(this.data.image);
           planeMaterialConfig.map = map;
         }

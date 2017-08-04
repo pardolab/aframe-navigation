@@ -1,6 +1,7 @@
 .sw[ponm]
 examples/build.js
 examples/node_modules/
+aframe-navigation/
 gh-pages
 node_modules/
 npm-debug.log
