@@ -1,9 +1,9 @@
 {
   "name": "aframe-navigation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Highly customizable navigation system",
   "main": "index.js",
-  "cdn": "dist/aframe-navigation.js",
+  "cdn": "https://unpkg.com/aframe-navigation/dist/aframe-navigation.min.js",
   "scripts": {
     "dev": "budo  --port 7000 --live --open",
     "dist": "webpack index.js dist/aframe-navigation.js babelify && webpack -p index.js dist/aframe-navigation.min.js babelify",
